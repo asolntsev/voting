@@ -1,0 +1,307 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+/*	vertical-align: baseline;*/
+	background: transparent;
+}
+body { 
+	line-height: 1;
+	text-align: center;
+    background-color: #FFFFFF;
+    color: #000;
+    font: 12px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	padding:0;
+	}
+:focus { outline: 0;}
+ins { text-decoration: none;}
+del { text-decoration: line-through;}
+table { border-collapse:separate; border-spacing: 0;}
+hr { clear:both; border-color: #ccc;}
+
+/* == TYPOGRAPHY == */
+h1, h2, h3, h4, h5 { font-weight: normal;}
+h1 {font-size: 1.8em; line-height:1.4em; margin:0.3em 0;color: #A41431;}
+h2 {font-size: 1.5em; line-height:1.2em; margin:0.3em 0;}
+h3 {font-size: 1.2em; line-height:1.2em; margin:0.5em 0;font-weight:600}
+h4 {font-size: 1.1em; line-height:1.4em; margin:0.7em 0; font-weight:600;}
+h5 {font-size: 1em; line-height:1.5em; margin:0.8em 0; font-weight:600;}
+
+p {font-size:1em; margin-bottom:0.8em;}
+a, a.link {     text-decoration: none;    color: #1c5298;}
+a:hover {    color: #0067C6;}
+li {margin-left: 1.5em; padding:1px;}
+.quiet {color: #666;}
+.loud { font-weight: bold;}
+.tLeft {text-align: left;}
+.tRight, .num, .sum {text-align: right;}
+.tCenter {text-align: center;}
+.sum {font-weight: bold;}
+
+h1 span, h2 span {font-size: 0.65em; color:#666;}
+/* ===== */
+
+.wrapper { text-align: center; border-top: solid 4px #1c5298;}
+.header {background: #90d3fd; 	margin:auto;  width:920px; text-align:left; padding:8px 20px;}
+.header h1 {color:#fff;}
+.page { margin:auto; width:960px; text-align:left; padding-top:20px;}
+.matrix { width:auto!important; min-width:960px;}
+.foot { clear: both; height:20px;}
+
+.mainmenu { height:16px; clear: both; margin-left: 250px;}
+.mainmenu .link {float:left; line-height:20px;}
+.mainmenu .link a {display:block;line-height:20px; background:transparent; padding:3px 12px;}
+.mainmenu .link span {display:block;line-height:20px; background:#ffffff; padding:3px 12px;}
+
+.lSide { float:left; width:240px; overflow:hidden;}
+.rSide { float:left; width:720px; overflow:visible; position:relative;}
+.matrix .lSide {margin-left:20px;}
+.matrix .rSide {width:auto; float:none; margin-left: 260px; margin-right:20px;}
+.col {float:left;}
+.clear {clear:both;}
+.cont { padding-left:40px;}
+.menu { border-top: solid 1px #ccc; border-bottom: solid 5px #90d3fd; margin-top:10px; margin-bottom: 12px;}
+.menu li { display:block; padding:0; margin:0;border-top: solid 4px #d0ebfe; border-bottom: solid 1px #ccc;}
+.menu a { display:block; padding:3px 2px 4px 3px;background-color: #EAF7FE;}
+.menu em { padding:3px 2px 4px 3px; }
+.menu a:hover {background-color: #E1F1FE;}
+.menu .active a {background-color: #ffffff;}
+.menu li a span { display: block; clear:both; color: #666; font-weight: normal; font-size:10px;}
+
+.submenu { border: 0px; margin-top:8px; margin-bottom: 12px;}
+.submenu li { display:block; padding:0; padding-left: 20px;margin:0;border: 0px;}
+.submenu a { display:block; padding:2px 2px 4px 3px;background-color: #ffffff;border: solid 1px #fff;}
+.submenu a:hover {background-color: #f3f3f3;}
+.submenu .active a {background-color: #ffffff; border: solid 1px #ddd; }
+.submenu li a span { display: block; clear:both; color: #666; font-weight: normal; font-size:10px;}
+
+.menu li ul { border: 0px; margin:5px;}
+.menu li ul li {border: 0px; padding-left:20px;}
+.menu li ul.submenu li.active ul li a {border: solid 1px #fff; padding:1px;}
+.menu li ul li em { font-style: normal;}
+
+.bigchart {border-top: solid 1px #ccc; border-bottom: solid 5px #90d3fd; margin-top:30px; margin-bottom: 12px;}
+.bigchart .wrap {border-top: solid 4px #d0ebfe; padding:20px 20px 30px 20px; height: 400px;}
+
+.grid { position:relative; margin-bottom:12px;}
+.legend {position:absolute; bottom:1px; right:3px; background: #ffffff;padding:6px; font-size: 0.92em; _top:450px;}
+.grid h4 {font-weight: normal; line-height: 1.1em;}
+.grid table {border-bottom: solid 1px #666}
+.title .label {vertical-align: bottom; text-align: right;}
+.title .total {vertical-align: bottom; text-align: center; font-size:18px;line-height:1.1em;}
+.head td {background-color: #999; color: #fff;text-align: center; border-bottom: solid 1px #888; font-size:11px;}
+.redline .redlineTd,
+span.redline {background: #858585; line-height:11px; font-size:11px; color:#ffffff; padding:2px; border-bottom: solid 1px #888; }
+span.redline {display:block; float:left; width:18px; height: 6px; margin-right:4px;}
+.erakond { text-align: right; padding-right:4px;border-top: solid 1px #eee;}
+.erakond h4 {font-weight: bold;}
+.resultA,
+.resultB { padding:2px 6px;background-color: #FFF7A0; text-align: center; border-top: solid 1px #fff;}
+.resultA {background-color:#F8B300; }
+.resultA .votes { font-size: 10px; text-align: right;}
+.resultA .change { font-size: 10px;}
+.resultA .place { font-size: 20px; line-height:22px;color: #fff;}
+.resultB .votes { font-size: 11px; text-align: right;}
+.resultB .change { font-size: 10px;}
+.resultB .place { font-size: 20px; line-height:20px;}
+.chart,
+.redline td.chart{ background: transparent url('img/bg_grid.gif') left top repeat-y; padding-left: 2px;}
+.grid .chart,
+.grid .redline td.chart{ width:440px; }
+.legend .old,
+.chart .old { height: 10px; clear:left; background: #ccc;position:relative;_margin-left:40px;}
+.chart .old .proc { position:absolute; width: 40px;right:-42px; font-size:10px; color: #666;}
+
+.chart .party0,
+.chart .party80043147,
+.chart .party80053370,
+.chart .party80243584,
+.chart .party80052459,
+.chart .party80223139,
+.chart .party80040344,
+.chart .party80022725,
+.chart .party80060832,
+.chart .party80051885,
+.chart .party80057600,
+.chart .party80060022 { height: 20px; clear:left; border: solid 1px #aaa; border-left: 0px; position:relative; z-index:2; _margin-left:40px;}
+
+.bigchart .party0,
+.bigchart .party80043147,
+.bigchart .party80053370,
+.bigchart .party80243584,
+.bigchart .party80052459,
+.bigchart .party80223139,
+.bigchart .party80040344,
+.bigchart .party80022725,
+.bigchart .party80060832,
+.bigchart .party80051885,
+.bigchart .party80057600,
+.bigchart .party80060022,
+{ height: auto; clear:left; border: solid 1px #aaa; border-bottom: 0px; font-size: 0px; text-indent: -999px;}
+
+.chart .party0 .proc,
+.chart .party80043147 .proc,
+.chart .party80053370 .proc,
+.chart .party80243584 .proc,
+.chart .party80052459 .proc,
+.chart .party80223139 .proc,
+.chart .party80040344 .proc,
+.chart .party80022725 .proc,
+.chart .party80060832 .proc,
+.chart .party80051885 .proc,
+.chart .party80057600 .proc,
+.chart .party80060022 .proc{position:absolute; width: 40px;right:-42px; }
+
+/* Erakondade V€RVID !! */
+
+.chart .party0, .mbubble .party0, .bigchart .party0 { background-color: #95C4CC;}
+.chart .party80043147, .mbubble .party80043147, .bigchart .party80043147  { background-color: #FFE200;}
+.chart .party80053370, .mbubble .party80053370, .bigchart .party80053370 { background-color: #129201;}
+.chart .party80243584, .mbubble .party80243584, .bigchart .party80243584 { background-color: #1046CE;}
+.chart .party80052459, .mbubble .party80052459, .bigchart .party80052459 { background-color: #C4162F;}
+.chart .party80223139, .mbubble .party80223139, .bigchart .party80223139 { background-color: #7DDD0F;}
+.chart .party80040344, .mbubble .party80040344, .bigchart .party80040344 { background-color: #D28B07;}
+.chart .party80022725, .mbubble .party80022725, .bigchart .party80022725  { background-color: #acb8ce;}
+.chart .party80060832, .mbubble .party80060832, .bigchart .party80060832  { background-color: #cc6633;}
+.chart .party80051885, .mbubble .party80051885, .bigchart .party80051885   { background-color: #4b90de;}
+.chart .party80057600, .mbubble .party80057600, .bigchart .party80057600  { background-color: #9ed1ee;}
+.chart .party80060022, .mbubble .party80060022, .bigchart .party80060022  { background-color: #990000;}
+
+
+.smallprint {font-size: 0.92em; color:#444444;}
+
+h3.erakond { text-align: left; margin-top: 1em;}
+p.result {padding-left:100px;}
+p.result strong { display: block; font-size: 1.5em; color: #666; line-height: 1.2em;}
+
+.mbubble { width:78px; height:60px; float:left; background: #ddd; position:relative; z-index:1; margin-right:20px;}
+.mbubble p.result { padding-left:5px; text-align: center;}
+.mbubble p.result strong { display: block; font-size: 2.2em; color: #222; line-height: 1.4em;}
+.mbubble .overlay {position:absolute; left:0px; top:0px; z-index:11}
+.mbubble .party0,
+.mbubble .party80043147,
+.mbubble .party80053370,
+.mbubble .party80243584,
+.mbubble .party80052459,
+.mbubble .party80223139,
+.mbubble .party80040344,
+.mbubble .party80022725,
+.mbubble .party80060832,
+.mbubble .party80051885,
+.mbubble .party80057600,
+.mbubble .party80060022 { }
+
+.mbubble.party0  { border-top: solid 10px #95C4CC;}
+.mbubble.party80043147  { border-top: solid 10px #FFE200;}
+.mbubble.party80053370  { border-top: solid 10px #129201;}
+.mbubble.party80243584  { border-top: solid 10px #1046CE;}
+.mbubble.party80052459  { border-top: solid 10px #C4162F;}
+.mbubble.party80223139  { border-top: solid 10px #7DDD0F;}
+.mbubble.party80040344  { border-top: solid 10px #D28B07;}
+.mbubble.party80022725  { border-top: solid 10px #acb8ce;}
+.mbubble.party80060832  { border-top: solid 10px #cc6633;}
+.mbubble.party80051885  { border-top: solid 10px #4b90de;}
+.mbubble.party80057600  { border-top: solid 10px #9ed1ee;}
+.mbubble.party80060022  { border-top: solid 10px #990000;}
+
+
+.graphplaceholder { position:absolute; right:0px; top:0px;}
+
+.dataTableWrap { border: solid 1px #90d3fd; background: #E1F3FE; margin-bottom: 1em; -moz-border-radius: 4px; -webkit-border-radius: 4px; padding:8px;}
+.dataTable { border: solid 1px #fff; background: #fff;width:100%;}
+.dataTable thead th,
+.dataTable thead td{ padding: 3px 6px; vertical-align: bottom; background: #1C5298; color: #fff; font-size:0.9em;} 
+.dataTable thead td a {color: #fff; display:block;}
+.dataTable tbody th,
+.dataTable tbody td{ padding: 4px 6px; border-bottom: solid 1px #ccc;}
+.dataTable tbody .total th,
+.dataTable tbody .total td { border-top: solid 1px #90d3fd;}
+.dataTable tbody .chart {padding:0px;}
+.dataTable tfoot th,
+.dataTable tfoot td{ padding: 2px 6px; background: #eee;}
+.dataTable thead .border { border-right: solid 2px #fff;}
+.dataTable tbody .border,
+.dataTable tfoot .border { border-right: solid 2px #eee;}
+
+.listTable { margin-bottom: 1em; }
+.listTable thead td { padding: 3px 6px; vertical-align: bottom; border-bottom: solid 1px #ccc;}
+.listTable tbody td { padding: 6px 6px 2px 6px; border-bottom: solid 1px #ccc;}
+.grid .listTable {border-bottom: 0px;}
+.dataMatrix {font-size:0.92em;border: solid 1px #90d3fd;}
+.dataMatrix thead td, .dataMatrix thead th {background: #E1F3FE; padding:2px 3px;}
+.dataMatrix tbody td { padding:2px 3px;}
+.dataMatrix tbody th { padding:2px 3px 2px 5px;}
+.dataMatrix tbody .total td,
+.dataMatrix tbody .total th { border-bottom: double 3px #90d3fd; border-top: solid 1px #90d3fd;}
+.dataMatrix tfoot td { padding: 2px 3px; background: #eee;}
+
+.hover, .hover td,
+.dataMatrix tbody tr:hover td,
+.dataMatrix tbody tr:hover th,
+.dataTable tbody tr:hover td,
+.dataTable tbody tr:hover th {background: #FFF7D8;}
+.bignum {font-size: 1.5em; line-height: 1.1em; text-align: right;}
+.data span { display: block; clear:both; color: #666; font-weight: normal; font-size:10px;}
+.full { height: 18px; width: 100px; background: #eee; }
+.full .part { clear:left;display:block;height:18px; background: #90d3fd;}
+/* value heatmap colors */
+.full .part2.c50 {background: #94ecf2;}
+.full .part2.c52 {background: #94e0f2;}
+.full .part2.c54 {background: #94d3f2;}
+.full .part2.c56 {background: #94c6f2;}
+.full .part2.c58 {background: #94baf2;}
+.full .part2.c60 {background: #94adf2;}
+.full .part2.c62 {background: #94a1f2;}
+.full .part2.c64 {background: #9894f2;}
+.full .part2.c66 {background: #a594f2;}
+.full .part2.c68 {background: #b294f2;}
+.full .part2.c70 {background: #be94f2;}
+.full .part2.c72 {background: #cb94f2;}
+.full .part2.c74 {background: #d794f2;}
+.full .part2.c76 {background: #e494f2;}
+.full .part2.c78 {background: #f294f2;}
+.full .part2.c80 {background: #f294e8;}
+.full .part2.c82 {background: #f294cf;}
+.full .part .proc { 
+	top:4px;
+	color:#111;
+	font-style:normal;
+	left:5px;
+	line-height:1em;
+	position:relative;
+	z-index:11;
+}
+.bignum .full .part .proc { top:0px;}
+
+.full .part2 { float:left;display:block;height:18px; background: #90d3fd;}
+.heatmap th,
+.heatmap td{padding:0px;}
+
+/** SCROLLABEL TABLE WITH FIXED HEAD **/
+#fixedscrolling { overflow: auto;	overflow-x:auto; position: relative; border-bottom: solid 2px #aaa;}
+#fixedscrolling table {margin-bottom:0px;}
+#fixedscrolling table>tbody	{  overflow: auto; overflow-x: hidden;}
+#fixedscrolling thead tr	{ position:relative; }
+#fixedscrolling thead tr th, #fixedscrolling thead tr td	{ white-space:nowrap;}
+/* non-standard IE Specific Rules*/
+#fixedscrolling thead tr	{
+    /* Causes the pixel header row to stay fixed in IE*/
+	top: expression(offsetParent.scrollTop);
+	/* This fixes a strange bug in IE where the header row would "shift" 1px to  the right after the table was scrolled down. */
+    left: expression(typeof(myvar) == 'undefined' ? 0+"px"+(myvar='true') : -1+"px");
+}
+#fixedscrolling thead tr th.last,
+#fixedscrolling thead tr td.last,
+#fixedscrolling tbody tr th.last,
+#fixedscrolling tbody tr td.last {padding-right:18px;}
+/* -------------------*/
