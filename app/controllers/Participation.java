@@ -4,7 +4,7 @@ import play.mvc.Controller;
 
 public class Participation extends Controller {
 
-    public static void index() {
+    public static void list() {
         render();
     }
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><title>#{get 'title' /}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="@{'/public/stylesheets/style_uus.css'}">
+</head>
+<body>
+<div class="wrapper">
+    <div class="header"><h1>Riigikogu valimised 2011</h1>
+
+        <div class="mainmenu">
+            <div class="link"><a href="/Participation/list">Osavõtt</a></div>
+            <div class="link"><a href="/Results/list">Valimistulemus</a></div>
+            <div class="link"><a href="/MandateDistribution/list">Valitud Riigikogu liikmed</a></div>
+            <div class="link"><a href="/ElectionResults/list">Hääletamistulemus</a></div>
+            <div style="position: relative; bottom: 50px; left: 170px;" class="link">
+                <a href="/eng.html" target="_blank">ENG</a>
+            </div>
+        </div>
+    </div>
+    <div class="page"><!--            <div class="lSide"><ul class="menu">&nbsp;</ul>                </div>-->
+        <div class="rSide">
+            #{doLayout /}
+            <div class="foot"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

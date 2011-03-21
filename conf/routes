@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /                                       Participation.index
+GET     /                                       Participation.list
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
