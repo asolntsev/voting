@@ -3,13 +3,6 @@
 
 <div class="cont"><h1>Valimistest osavõtt</h1>
 
-<ul>
-#{list items:parties, as:'party'}
-    <li><span class="${party_parity}">${party_index}. ${party.name}</span></li>
-#{/list}
-</ul>
-
-
 <div class="dataTableWrap" style="width: 98%;">
 <table class="dataTable" cellpadding="0" cellspacing="0">
 <thead>
@@ -29,18 +22,18 @@
 </tr>
 </thead>
 <tbody>
-#{list items:participation, as:'participation'}
+#{list items:participation, as:'participationPerConstituency'}
 <tr>
-    <th class="border">${participation.constituency.name}</th>
-    <td class="num ">2,7</td>
-    <td class="num ">6,4</td>
-    <td class="num border">11,2</td>
-    <td class="num ">43,3</td>
-    <td class="num ">59,0</td>
-    <td class="num border">68,7</td>
+    <th class="border">${participationPerConstituency.constituency.name}</th>
+    #{list items:participationPerConstituency.participationPerDay, as:'perDay'}
+    <td class="num ">${perDay.format('##,00%')}</td>
+    #{/list}
+
     <td>
-        <div class="full"><span class="part" style="width: 68.7%;">
-            <em class="proc">${participation.totalVotes}</em></span>
+        <div class="full">
+            <span class="part" style="width: 68.7%;">
+                <em class="proc">${participationPerConstituency.totalParticipation.format('##,00%')}</em>
+            </span>
         </div>
     </td>
 </tr>
