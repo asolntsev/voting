@@ -89,8 +89,6 @@ public class Participation extends Controller {
 		}
 */
 		List<ParticipationResult> participation = dao.list();
-		participation.add(dao.countTotalParticipation(participation));
-
 		render(participation);
 	}
 }

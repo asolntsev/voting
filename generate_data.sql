@@ -1,11 +1,4 @@
-﻿/*
-SELECT c.id, count(*), extract(doy from v.date)
-FROM constituency c, vote v
-WHERE c.id = v.constituencyId
-GROUP BY c.id, extract(doy from v.date)
-*/
-
-DELETE FROM constituency;
+﻿DELETE FROM constituency;
 INSERT INTO constituency (id, name, population) VALUES(1, 'Haabersti , Kristiine, Põhja-Tallinn', 76189);
 INSERT INTO constituency (id, name, population) VALUES(2, 'Kesklinn, Lasnamäe, Pirita', 104478);
 INSERT INTO constituency (id, name, population) VALUES(3, 'Mustamäe, Nõmme', 69816);

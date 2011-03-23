@@ -28,14 +28,6 @@
     #{list items:participationPerConstituency.participationPerDay, as:'perDay'}
     <td class="num ">${perDay.format('##,00%')}</td>
     #{/list}
-
-    <td>
-        <div class="full">
-            <span class="part" style="width: 68.7%;">
-                <em class="proc">${participationPerConstituency.totalParticipation.format('##,00%')}</em>
-            </span>
-        </div>
-    </td>
 </tr>
 #{/list}
 
