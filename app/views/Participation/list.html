@@ -26,7 +26,19 @@
 <tr>
     <th class="border">${participationPerConstituency.constituency.name}</th>
     #{list items:participationPerConstituency.participationPerDay, as:'perDay'}
-    <td class="num ">${perDay.format('##,00%')}</td>
+
+        #{if perDay_isLast}
+            <td class="num">
+            <div class="full"><span style="width: 68.7%;" class="part"><em class="proc">${perDay.format('##,00%')}</em></span></div>
+            </td>
+        #{/if}
+        #{else}
+            <td>
+            ${perDay.format('##,##%')}
+            </td>
+        #{/else}
+
+
     #{/list}
 </tr>
 #{/list}

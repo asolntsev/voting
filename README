@@ -1,0 +1,9 @@
+
+What problems unit-tests find:
+1. Method models.ParticipationResult.getParticipationPerDay:
+Without casting to (float), methods generates zeroes.
+
+2. Method models.ParticipationResult.getParticipationPerDay:
+Forgot to multiply by 100 (to get percentage)
+
+3.
