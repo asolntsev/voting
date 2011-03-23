@@ -8,8 +8,12 @@ public class EstonianUniverse {
 	public static Calendar getVotingDate() {
 		Calendar votingDate = Calendar.getInstance();
 		votingDate.set(Calendar.YEAR, 2011);
-		votingDate.set(Calendar.MONTH, 3);
+		votingDate.set(Calendar.MONTH, Calendar.MARCH);
 		votingDate.set(Calendar.DATE, 11);
+		votingDate.set(Calendar.HOUR_OF_DAY, 0);
+		votingDate.set(Calendar.MINUTE, 0);
+		votingDate.set(Calendar.SECOND, 0);
+		votingDate.set(Calendar.MILLISECOND, 0);
 		return votingDate;
 	}
 }

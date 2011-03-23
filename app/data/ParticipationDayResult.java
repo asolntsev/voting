@@ -10,11 +10,11 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQueries({
 		@NamedQuery(name = "getParticipationPerDay",
-				query = "SELECT new data.ParticipationDayResult(c, count(*), DAYOFYEAR(v.date)) " +
+				query = "SELECT new data.ParticipationDayResult(c, count(*), extract(doy from v.date)) " +
 						" FROM Constituency c, Vote v" +
 						" WHERE c.id = v.constituencyId" +
-						" GROUP BY c.id, DAYOFYEAR(v.date)" +
-						" ORDER BY c.id, DAYOFYEAR(v.date)")
+						" GROUP BY c.id, extract(doy from v.date)" +
+						" ORDER BY c.id, extract(doy from v.date)")
 })
 public class ParticipationDayResult extends Model {
 	private Constituency constituency;

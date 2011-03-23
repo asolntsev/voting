@@ -9,16 +9,14 @@ import play.db.jpa.Model;
 import play.mvc.Controller;
 
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 import static models.EstonianUniverse.VOTING_LENGTH_DAYS;
 import static models.EstonianUniverse.getVotingDate;
 
 public class Participation extends Controller {
 
-	private static final int NUMBER_OF_VOTES = 1000;
+	private static final int NUMBER_OF_VOTES = 500000;
 	private static final Logger log = LoggerFactory.getLogger(Participation.class);
 
 	private static ParticipationResultDAO dao = new ParticipationResultDAO();
@@ -34,18 +32,18 @@ public class Participation extends Controller {
 		new Participant(keskerakond.getId(), "Mihhail Stalnuhhin", 664, "Tartu").save();
 
 		Constituency[] constituencies = new Constituency[]{
-				new Constituency("Haabersti , Kristiine, Põhja-Tallinn", 76189/500),
-				new Constituency("Kesklinn, Lasnamäe, Pirita", 104478/500),
-				new Constituency("Mustamäe, Nõmme", 69816/500),
-				new Constituency("Harju, Rapla", 130270/500),
-				new Constituency("Hiiu, Lääne, Saare", 58583/500),
-				new Constituency("Lääne-Viru", 48875/500),
-				new Constituency("Ida-Viru", 67604/500),
-				new Constituency("Järva, Viljandi", 70092/500),
-				new Constituency("Jõgeva, Tartu", 67504/500),
-				new Constituency("Tartu linn", 70968/500),
-				new Constituency("Võru, Valga, Põlva", 79857/500),
-				new Constituency("Pärnu", 69110/500)};
+				new Constituency("Haabersti , Kristiine, Põhja-Tallinn", 76189 / 1),
+				new Constituency("Kesklinn, Lasnamäe, Pirita", 104478 / 1),
+				new Constituency("Mustamäe, Nõmme", 69816 / 1),
+				new Constituency("Harju, Rapla", 130270 / 1),
+				new Constituency("Hiiu, Lääne, Saare", 58583 / 1),
+				new Constituency("Lääne-Viru", 48875 / 1),
+				new Constituency("Ida-Viru", 67604 / 1),
+				new Constituency("Järva, Viljandi", 70092 / 1),
+				new Constituency("Jõgeva, Tartu", 67504 / 1),
+				new Constituency("Tartu linn", 70968 / 1),
+				new Constituency("Võru, Valga, Põlva", 79857 / 1),
+				new Constituency("Pärnu", 69110 / 1)};
 		saveAll(constituencies);
 	}
 
@@ -56,8 +54,8 @@ public class Participation extends Controller {
 		Calendar votingDate = getVotingDate();
 		for (int i = 0; i < NUMBER_OF_VOTES; i++) {
 			Calendar date = (Calendar) votingDate.clone();
-			date.add(Calendar.DATE, -(int) (Math.random() * (VOTING_LENGTH_DAYS-1)));
-			date.add(Calendar.HOUR_OF_DAY, - (int) (Math.random() * 12));
+			date.add(Calendar.DATE, -(int) (Math.random() * (VOTING_LENGTH_DAYS - 1)));
+			date.add(Calendar.HOUR_OF_DAY, -(int) (Math.random() * 12));
 			Vote vote = new Vote(random(constituencies), random(participants), date.getTime());
 			vote.save();
 			if (i % 100 == 0) {
@@ -81,6 +79,7 @@ public class Participation extends Controller {
 	}
 
 	public static void list() {
+/*
 		List<Object> parties = Party.all().fetch();
 
 		if (parties.isEmpty()) {
@@ -88,6 +87,7 @@ public class Participation extends Controller {
 			fillRandomVotes();
 			JPA.em().getTransaction().commit();
 		}
+*/
 		List<ParticipationResult> participation = dao.list();
 		participation.add(dao.countTotalParticipation(participation));
 
