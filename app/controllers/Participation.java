@@ -26,10 +26,10 @@ public class Participation extends Controller {
 		Party keskerakond = new Party("Keskerakond");
 		saveAll(reformierakond, keskerakond);
 
-		new Participant(reformierakond.getId(), "Andrus Ansip", 507, "Tartu linn").save();
-		new Participant(reformierakond.getId(), "Urmas Paet", 497, "Tallinn").save();
-		new Participant(keskerakond.getId(), "Edgar Savisaar", 609, "Harjumaa").save();
-		new Participant(keskerakond.getId(), "Mihhail Stalnuhhin", 664, "Tartu").save();
+		new Candidate(reformierakond.getId(), "Andrus Ansip", 507, "Tartu linn").save();
+		new Candidate(reformierakond.getId(), "Urmas Paet", 497, "Tallinn").save();
+		new Candidate(keskerakond.getId(), "Edgar Savisaar", 609, "Harjumaa").save();
+		new Candidate(keskerakond.getId(), "Mihhail Stalnuhhin", 664, "Tartu").save();
 
 		Constituency[] constituencies = new Constituency[]{
 				new Constituency("Haabersti , Kristiine, Põhja-Tallinn", 76189 / 1),
@@ -48,7 +48,8 @@ public class Participation extends Controller {
 	}
 
 	private static void fillRandomVotes() {
-		long participants = Participant.count();
+		long candidates = Candidate.count();
+		long counties = County.count();
 		long constituencies = Constituency.count();
 		long start = System.currentTimeMillis();
 		Calendar votingDate = getVotingDate();
@@ -56,7 +57,7 @@ public class Participation extends Controller {
 			Calendar date = (Calendar) votingDate.clone();
 			date.add(Calendar.DATE, -(int) (Math.random() * (VOTING_LENGTH_DAYS - 1)));
 			date.add(Calendar.HOUR_OF_DAY, -(int) (Math.random() * 12));
-			Vote vote = new Vote(random(constituencies), random(participants), date.getTime());
+			Vote vote = new Vote(random(counties), random(constituencies), random(candidates), date.getTime());
 			vote.save();
 			if (i % 100 == 0) {
 				JPA.em().getTransaction().commit();

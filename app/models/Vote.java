@@ -1,5 +1,6 @@
 package models;
 
+import org.hibernate.annotations.Index;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
@@ -9,13 +10,15 @@ import java.util.Date;
 @Entity
 @Table(name = "vote")
 public class Vote extends Model {
-    Long constituencyId;
-    Long participantId;
-    Date date;
+	Long countyId;
+	Long constituencyId;
+	Long candidateId;
+	Date date;
 
-    public Vote(Long constituencyId, Long participantId, Date date) {
-        this.constituencyId = constituencyId;
-        this.participantId = participantId;
-        this.date = date;
-    }
+	public Vote(Long countyId, Long constituencyId, Long candidateId, Date date) {
+		this.countyId = countyId;
+		this.constituencyId = constituencyId;
+		this.candidateId = candidateId;
+		this.date = date;
+	}
 }

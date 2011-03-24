@@ -22,10 +22,10 @@
 </tr>
 </thead>
 <tbody>
-#{list items:participation, as:'participationPerConstituency'}
+#{list items:participation, as:'participationPerCounty'}
 <tr>
-    <th class="border">${participationPerConstituency.constituency.name}</th>
-    #{list items:participationPerConstituency.participationPerDay, as:'perDay'}
+    <th class="border">${participationPerCounty.county.name}</th>
+    #{list items:participationPerCounty.participationPerDay, as:'perDay'}
 
         #{if perDay_isLast}
             <td class="num">

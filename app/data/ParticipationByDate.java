@@ -1,6 +1,6 @@
 package data;
 
-import models.Constituency;
+import models.County;
 import play.db.jpa.Model;
 
 import javax.persistence.Entity;
@@ -11,22 +11,22 @@ import javax.persistence.NamedQuery;
 @NamedQueries({
 		@NamedQuery(name = "getParticipationByDate",
 				query = "SELECT new data.ParticipationByDate(c," +
-						" (select count(*) from Vote v where c.id = v.constituencyId and v.date <= :votingDate) as votes" +
-						" ) FROM Constituency c"),
+						" (select count(*) from Vote v where c.id = v.countyId and v.date <= :votingDate) as votes" +
+						" ) FROM County c"),
 		@NamedQuery(name = "getTotalParticipationByDate",
 				query = "select count(*) from Vote v where v.date <= :votingDate) as totalVotes")
 })
 public class ParticipationByDate extends Model {
-	private Constituency constituency;
+	private County county;
 	private int votes;
 
-	public ParticipationByDate(Constituency constituency, Number votes) {
-		this.constituency = constituency;
+	public ParticipationByDate(County county, Number votes) {
+		this.county = county;
 		this.votes = votes.intValue();
 	}
 
-	public Constituency getConstituency() {
-		return constituency;
+	public County getCounty() {
+		return county;
 	}
 
 	public int getVotes() {

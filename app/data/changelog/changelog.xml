@@ -1,0 +1,14 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <include file="app/data/changelog/constituency-data.xml"/>
+    <include file="app/data/changelog/county-data.xml"/>
+    <include file="app/data/changelog/party-data.xml"/>
+    <include file="app/data/changelog/candidate-data.xml"/>
+    <include file="app/data/changelog/vote.xml"/>
+
+</databaseChangeLog>

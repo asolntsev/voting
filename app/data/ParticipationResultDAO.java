@@ -1,23 +1,22 @@
 package data;
 
-import models.Constituency;
+import models.County;
 import models.EstonianUniverse;
 import models.ParticipationResult;
 
-import javax.persistence.Query;
 import java.util.*;
 
 public class ParticipationResultDAO {
-	private Constituency total = null;
+	private County total = null;
 
-	private Constituency getTotalConstituency() {
+	private County getTotalCounty() {
 		if (total == null) {
-			List<Constituency> all = Constituency.all().fetch();
+			List<County> all = County.all().fetch();
 			int totalPopulation = 0;
-			for (Constituency constituency : all) {
-				totalPopulation += constituency.getPopulation();
+			for (County county : all) {
+				totalPopulation += county.getPopulation();
 			}
-			total = new Constituency(1000L+all.size(), "Eesti Vabariik kokku", totalPopulation);
+			total = new County(1000L+all.size(), "Eesti Vabariik kokku", totalPopulation);
 		}
 
 		return total;
@@ -43,10 +42,10 @@ public class ParticipationResultDAO {
 	}
 
 	private void accumulate(Map<Long, ParticipationResult> accumulator, ParticipationByDate participationByDate) {
-		ParticipationResult result = accumulator.get(participationByDate.getConstituency().getId());
+		ParticipationResult result = accumulator.get(participationByDate.getCounty().getId());
 		if (result == null) {
-			result = new ParticipationResult(participationByDate.getConstituency());
-			accumulator.put(participationByDate.getConstituency().getId(), result);
+			result = new ParticipationResult(participationByDate.getCounty());
+			accumulator.put(participationByDate.getCounty().getId(), result);
 		}
 		result.addVotes(participationByDate.getVotes());
 	}
@@ -66,7 +65,7 @@ public class ParticipationResultDAO {
 				.setParameter("votingDate", votingDate.getTime())
 				.getSingleResult();
 
-		resultList.add(new ParticipationByDate(getTotalConstituency(), totalVotes));
+		resultList.add(new ParticipationByDate(getTotalCounty(), totalVotes));
 
 		return resultList;
 	}

@@ -1,6 +1,7 @@
 package data;
 
 import models.Constituency;
+import models.County;
 import models.ParticipationResult;
 import org.junit.Test;
 import org.mockito.Matchers;
@@ -21,8 +22,8 @@ import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.doReturn;
 
 public class ParticipationResultDAOTest {
-	Constituency constituency1 = new Constituency(1L, "Baikal", 28);
-	Constituency constituency2 = new Constituency(2L, "Siberia", 36);
+	County county1 = new County(1L, "Baikal", 28);
+	County county2 = new County(2L, "Siberia", 36);
 	ParticipationResultDAO dao = Mockito.spy(new ParticipationResultDAO());
 
 	@Test
@@ -35,8 +36,8 @@ public class ParticipationResultDAOTest {
 	@Test
 	public void collectsParticipationByDates() {
 		mock(
-				new ParticipationByDate(constituency1, 11),
-				new ParticipationByDate(constituency2, 22)
+				new ParticipationByDate(county1, 11),
+				new ParticipationByDate(county2, 22)
 		);
 
 		List<ParticipationResult> participationResults = dao.list();
