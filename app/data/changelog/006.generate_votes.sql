@@ -1,7 +1,7 @@
 ﻿CREATE OR REPLACE FUNCTION generate_votes(
     votesCount IN INT,
     count OUT int)
-AS $$
+AS $PROC$
 DECLARE
   votingDate DATE := date '2011-03-11';
   maxId int;
@@ -36,10 +36,9 @@ BEGIN
     count := count + 1;
   END LOOP;
 END;
-$$ LANGUAGE plpgsql;
+$PROC$ LANGUAGE plpgsql;
 
 /*
- ::::: EXECUTE ME: :::::
  delete from vote;
  SELECT * FROM generate_votes(600000);
 */

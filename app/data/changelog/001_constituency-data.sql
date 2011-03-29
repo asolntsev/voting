@@ -1,12 +1,3 @@
-<databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
-        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-    <changeSet id="constituency.data.01" author="asolntsev">
-        <sql>
-            <![CDATA[
 INSERT INTO constituency (id, name, population) VALUES(1, 'Haabersti , Kristiine, Põhja-Tallinn', 76189);
 INSERT INTO constituency (id, name, population) VALUES(2, 'Kesklinn, Lasnamäe, Pirita', 104478);
 INSERT INTO constituency (id, name, population) VALUES(3, 'Mustamäe, Nõmme', 69816);
@@ -20,8 +11,3 @@ INSERT INTO constituency (id, name, population) VALUES(10,'Tartu linn', 70968);
 INSERT INTO constituency (id, name, population) VALUES(11,'Võru, Valga, Põlva', 79857);
 INSERT INTO constituency (id, name, population) VALUES(12,'Pärnu', 69110);
 INSERT INTO constituency (id, name, population) VALUES(13,'E-hääled', 913346);
-            ]]>
-        </sql>
-    </changeSet>
-
-</databaseChangeLog>

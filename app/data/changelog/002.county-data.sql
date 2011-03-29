@@ -1,12 +1,3 @@
-<databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
-        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-    <changeSet id="county.data.01" author="asolntsev">
-        <sql>
-            <![CDATA[
 INSERT INTO county (id, name, population) VALUES(1, 'Harju maakond', 76189);
 INSERT INTO county (id, name, population) VALUES(2, 'Hiiu maakond', 104478);
 INSERT INTO county (id, name, population) VALUES(3, 'Ida-Viru maakond', 69816);
@@ -25,8 +16,3 @@ INSERT INTO county (id, name, population) VALUES(15,'Võru maakond', 49110);
 INSERT INTO county (id, name, population) VALUES(16,'Tallinn', 300110);
 INSERT INTO county (id, name, population) VALUES(17,'Tartu linn', 209110);
 INSERT INTO county (id, name, population) VALUES(18,'E-hääled', 913346);
-            ]]>
-        </sql>
-    </changeSet>
-
-</databaseChangeLog>
