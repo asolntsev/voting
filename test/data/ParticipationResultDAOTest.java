@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
@@ -41,5 +42,12 @@ public class ParticipationResultDAOTest {
         assertEquals(2, participationResults.size());
         assertEquals(participationResults.get(0).getVotesPerDate(), asList(11, 11, 11, 11, 11, 11, 11));
         assertEquals(participationResults.get(1).getVotesPerDate(), asList(22, 22, 22, 22, 22, 22, 22));
+    }
+
+    @Test
+    public void totalCountySummarizesAllCounties() {
+        County totalCounty = dao.getTotalCounty();
+        assertThat(totalCounty.getName(), equalTo("Eesti riigi vabariik"));
+        assertThat(totalCounty.getPopulation(), equalTo(333));
     }
 }

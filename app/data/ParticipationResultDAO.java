@@ -9,9 +9,9 @@ import java.util.*;
 public class ParticipationResultDAO {
 	private County total = null;
 
-	private County getTotalCounty() {
+	County getTotalCounty() {
 		if (total == null) {
-			List<County> all = County.all().fetch();
+			List<County> all = getAllCounties();
 			int totalPopulation = 0;
 			for (County county : all) {
 				totalPopulation += county.getPopulation();
@@ -22,7 +22,11 @@ public class ParticipationResultDAO {
 		return total;
 	}
 
-	public List<ParticipationResult> list() {
+    List<County> getAllCounties() {
+        return County.all().fetch();
+    }
+
+    public List<ParticipationResult> list() {
 		Map<Long,ParticipationResult> accumulator = new TreeMap<Long, ParticipationResult>();
 		loadParticipation(accumulator, Calendar.DATE, -5);
 		loadParticipation(accumulator, Calendar.DATE, -4);
