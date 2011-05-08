@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="scala" name="Scala">
+      <configuration>
+        <option name="compilerLibraryLevel" value="Global" />
+        <option name="compilerLibraryName" value="scala-compiler-2.8.1" />
+        <option name="deprecationWarnings" value="true" />
+        <option name="explainTypeErrors" value="true" />
+        <option name="uncheckedWarnings" value="true" />
+      </configuration>
+    </facet>
+  </component>
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -10,6 +22,41 @@
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>
+    <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library name="Project Libraries">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PlayFramework Dependecies">
+        <CLASSES>
+          <root url="file://E:/play-1.1/framework/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://E:/play-1.1/framework/lib" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/play-1.1/framework/play.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
@@ -20,6 +67,9 @@
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
