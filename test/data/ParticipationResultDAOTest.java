@@ -23,7 +23,8 @@ public class ParticipationResultDAOTest {
 
     @Test
     public void returnsEmptyCollectionIfNoDataFound() {
-        doReturn(Collections.<ParticipationResult>emptyList()).when(dao).getParticipationPerDay(anyInt(), anyInt());
+        doReturn(Collections.<ParticipationByDate>emptyList()).when(dao).getParticipationPerDay(anyInt(), anyInt());
+//        when(dao.getParticipationPerDay(anyInt(), anyInt())).thenReturn(Collections.<ParticipationByDate>emptyList());
         List<ParticipationResult> results = dao.list();
         assertThat(results.isEmpty(), is(true));
     }
@@ -46,8 +47,11 @@ public class ParticipationResultDAOTest {
 
     @Test
     public void totalCountySummarizesAllCounties() {
+        //when(dao.getAllCounties()).thenReturn(asList(county1, county2));
+        doReturn(asList(county1, county2)).when(dao).getAllCounties();
+
         County totalCounty = dao.getTotalCounty();
-        assertThat(totalCounty.getName(), equalTo("Eesti riigi vabariik"));
-        assertThat(totalCounty.getPopulation(), equalTo(333));
+        assertThat(totalCounty.getName(), equalTo("Eesti Vabariik kokku"));
+        assertThat(totalCounty.getPopulation(), equalTo(28+36));
     }
 }
