@@ -1,8 +1,8 @@
+import java.util.{EmptyStackException, Stack}
 import models.{County, ParticipationResult}
 import org.junit.Assert._
 import org.scalatest.Spec
 import org.scalatest.matchers.ShouldMatchers
-import scala.collection.mutable.Stack
 
 class ParticipationResultSpec extends Spec with ShouldMatchers {
 
@@ -19,7 +19,7 @@ class ParticipationResultSpec extends Spec with ShouldMatchers {
       it("should complain when popped") {
         evaluating {
           stack.pop()
-        } should produce[NoSuchElementException]
+        } should produce[EmptyStackException]
       }
     }
   }
