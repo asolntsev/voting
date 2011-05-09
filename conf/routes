@@ -4,9 +4,13 @@
 
 # Home page
 GET     /                                       Participation.list
+GET     /Results/                               Results.votingResults
+GET     /Results/{constituencyId}               Results.votingResultsPerConstituency
+
 
 # Map static resources from the /app/public folder to the /public path
 GET     /public/                                staticDir:public
 
 # Catch all
+*       /{controller}/                          {controller}.index
 *       /{controller}/{action}                  {controller}.{action}

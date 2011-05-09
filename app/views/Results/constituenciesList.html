@@ -1,0 +1,28 @@
+#{extends 'base.html' /}
+
+<div class="page">
+    <div class="lSide">
+        <ul class="menu">
+            #{list items:constituencies, as:'constituency'}
+            <li #{if constituencyId == constituency.id}class="active"#{/if}>
+                <a href="/Results/${constituency.id}">
+                    #{if constituency_isFirst}
+                        <strong>${constituency.name}</strong>
+                    #{/if}
+                    #{else}
+                        <span>VALIMISRINGKOND NR ${constituency.id}</span>${constituency.name}
+                    #{/else}
+                </a>
+            </li>
+            #{/list}
+        </ul>
+
+        <!--<p class="smallprint"><strong>Hääletamistulemuste protokolli edastanud:</strong> 625 jaoskonda 625 –st.<br/></p>-->
+    </div>
+
+    <div class="rSide">
+        #{doLayout /}
+    </div>
+
+    <div class="foot"></div>
+</div></div></body></html>

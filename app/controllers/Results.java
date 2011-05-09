@@ -6,10 +6,25 @@ import play.mvc.Controller;
 import java.util.List;
 
 public class Results extends Controller {
-    public static void list(long constituencyId) {
+    public static void votingResults() {
+        List<Constituency> constituencies = getConstituencies();
+        render(Long.valueOf(0L), constituencies);
+    }
+
+    public static void votingResultsPerConstituency(Long constituencyId) {
+        if (constituencyId == 0) {
+            votingResults();
+            return;
+        }
+
+        List<Constituency> constituencies = getConstituencies();
+        render(constituencyId, constituencies);
+    }
+
+    private static List<Constituency> getConstituencies() {
         List<Constituency> constituencies = Constituency.all().fetch();
         constituencies.add(0, getTotalConstituency());
-        render(constituencyId, constituencies);
+        return constituencies;
     }
 
     static Constituency getTotalConstituency() {

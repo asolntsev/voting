@@ -4,6 +4,7 @@ import java.util.Calendar;
 
 public class EstonianUniverse {
 	public static int VOTING_LENGTH_DAYS = 6;
+	public static int MANDATES = 101;
 
 	public static Calendar getVotingDate() {
 		Calendar votingDate = Calendar.getInstance();
