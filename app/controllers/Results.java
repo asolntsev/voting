@@ -1,14 +1,22 @@
 package controllers;
 
+import data.PartyVotes;
+import data.PartyVotesDAO;
+import data.PartyVotesDAOImpl;
 import models.Constituency;
+import models.PartyResults;
 import play.mvc.Controller;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Results extends Controller {
+    static PartyVotesDAO partyResults = new PartyVotesDAOImpl();
+
     public static void votingResults() {
         List<Constituency> constituencies = getConstituencies();
-        render(Long.valueOf(0L), constituencies);
+        List<PartyVotes> results = partyResults.list();
+        render(Long.valueOf(0L), constituencies, results);
     }
 
     public static void votingResultsPerConstituency(Long constituencyId) {
@@ -34,5 +42,9 @@ public class Results extends Controller {
             totalPopulation += constituency.getPopulation();
         }
         return new Constituency(0L, "EESTI VABARIIK kokku", totalPopulation);
+    }
+
+    public static List<PartyResults> computeMandates() {
+        return Collections.emptyList();
     }
 }
