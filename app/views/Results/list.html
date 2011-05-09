@@ -1,0 +1,196 @@
+#{extends 'base.html' /}
+#{set title:'RIIGIKOGU VALIMINE 2011' /}
+
+
+<div class="page">
+    <div class="lSide">
+        <ul class="menu">
+            #{list items:constituencies, as:'constituency'}
+            <li #{if constituencyId==constituency.id}class="active"#{/if}>
+                <a href="?constituencyId=${constituency.id}">
+                    #{if constituency_isFirst}
+                        <strong>${constituency.name}</strong>
+                    #{/if}
+                    #{else}
+                        <span>VALIMISRINGKOND NR ${constituency.id}</span>${constituency.name}
+                    #{/else}
+                </a>
+            </li>
+            #{/list}
+        </ul>
+
+        <!--<p class="smallprint"><strong>Hääletamistulemuste protokolli edastanud:</strong> 625 jaoskonda 625 –st.<br/></p>-->
+    </div>
+
+    <div class="rSide">
+        <div class="cont"><h1>Valimistulemus</h1>
+
+            <h2>Eesti Vabariik kokku</h2>
+
+            <div class="grid">
+                <table cellpadding="0" cellspacing="0">
+                    <tr class="title">
+                        <td class="label">Hääli kokku:</td>
+                        <td class="total" colspan="2">575 133</td>
+                        <td style="vertical-align: top; text-align: right;" class="quiet">Andmed seisuga <span
+                                style="font-size: 18px;">&nbsp;08.03.2011 13:41:46</span></td>
+                    </tr>
+                    <tr class="head">
+                        <td>Erakond</td>
+                        <td colspan="2">Valimistulemus</td>
+                        <td>% häältest</td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Eesti Reformierakond</h4></td>
+                        <td class="resultA">
+                            <div class="place" title="Mandaatite arv">33</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">+2</div>
+                        </td>
+                        <td class="resultA">
+                            <div class="votes" title="Hääli erakonnal">164&nbsp;255</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80043147" style="width: 286px;"><span class="proc">28,6%</span></div>
+                            <div class="old" style="width: 278px;"><span class="proc">27,8%</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Eesti Keskerakond</h4></td>
+                        <td class="resultA">
+                            <div class="place" title="Mandaatite arv">26</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">-3</div>
+                        </td>
+                        <td class="resultA">
+                            <div class="votes" title="Hääli erakonnal">134&nbsp;124</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80053370" style="width: 233px;"><span class="proc">23,3%</span></div>
+                            <div class="old" style="width: 261px;"><span class="proc">26,1%</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Erakond Isamaa ja Res Publica Liit</h4></td>
+                        <td class="resultA">
+                            <div class="place" title="Mandaatite arv">23</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">+4</div>
+                        </td>
+                        <td class="resultA">
+                            <div class="votes" title="Hääli erakonnal">118&nbsp;023</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80243584" style="width: 205px;"><span class="proc">20,5%</span></div>
+                            <div class="old" style="width: 179px;"><span class="proc">17,9%</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Sotsiaaldemokraatlik Erakond</h4></td>
+                        <td class="resultA">
+                            <div class="place" title="Mandaatite arv">19</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">+9</div>
+                        </td>
+                        <td class="resultA">
+                            <div class="votes" title="Hääli erakonnal">98&nbsp;307</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80052459" style="width: 171px;"><span class="proc">17,1%</span></div>
+                            <div class="old" style="width: 106px;"><span class="proc">10,6%</span></div>
+                        </td>
+                    </tr>
+                    <tr class="redline">
+                        <td colspan="3" class="redlineTd">5% künnis: 28756,65 häält</td>
+                        <td class="chart">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Erakond Eestimaa Rohelised</h4></td>
+                        <td class="resultB">
+                            <div class="place" title="Mandaatite arv">-</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">-6</div>
+                        </td>
+                        <td class="resultB">
+                            <div class="votes" title="Hääli erakonnal">21&nbsp;824</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80223139" style="width: 38px;"><span class="proc">3,8%</span></div>
+                            <div class="old" style="width: 71px;"><span class="proc">7,1%</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Eestimaa Rahvaliit</h4></td>
+                        <td class="resultB">
+                            <div class="place" title="Mandaatite arv">-</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">-6</div>
+                        </td>
+                        <td class="resultB">
+                            <div class="votes" title="Hääli erakonnal">12&nbsp;184</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80040344" style="width: 21px;"><span class="proc">2,1%</span></div>
+                            <div class="old" style="width: 71px;"><span class="proc">7,1%</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Vene Erakond Eestis</h4></td>
+                        <td class="resultB">
+                            <div class="place" title="Mandaatite arv">-</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">+0</div>
+                        </td>
+                        <td class="resultB">
+                            <div class="votes" title="Hääli erakonnal">5&nbsp;029</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80057600" style="width: 9px;"><span class="proc">0,9%</span></div>
+                            <div class="old" style="width: 2px;"><span class="proc">0,2%</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Erakond Eesti Kristlikud Demokraadid</h4></td>
+                        <td class="resultB">
+                            <div class="place" title="Mandaatite arv">-</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">+0</div>
+                        </td>
+                        <td class="resultB">
+                            <div class="votes" title="Hääli erakonnal">2&nbsp;934</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80060832" style="width: 5px;"><span class="proc">0,5%</span></div>
+                            <div class="old" style="width: 17px;"><span class="proc">1,7%</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Eesti Iseseisvuspartei</h4></td>
+                        <td class="resultB">
+                            <div class="place" title="Mandaatite arv">-</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">+0</div>
+                        </td>
+                        <td class="resultB">
+                            <div class="votes" title="Hääli erakonnal">2&nbsp;571</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party80051885" style="width: 4px;"><span class="proc">0,4%</span></div>
+                            <div class="old" style="width: 2px;"><span class="proc">0,2%</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="erakond"><h4>Üksikkandidaadid</h4></td>
+                        <td class="resultB">
+                            <div class="place" title="Mandaatite arv">-</div>
+                            <div class="change" title="Mandaatite arvu muutus 2007 võrreldes">+0</div>
+                        </td>
+                        <td class="resultB">
+                            <div class="votes" title="Hääli erakonnal">15&nbsp;882</div>
+                        </td>
+                        <td class="chart">
+                            <div class="party0" style="width: 28px;"><span class="proc">2,8%</span></div>
+                            <div class="old" style="width: 1px;"><span class="proc">0,1%</span></div>
+                        </td>
+                    </tr>
+                </table>
+                <p class="legend"> Valimistulemuse kastis on kuvatud:<br/>1. rida - Mandaatide arv Riigikogus<br/>2.
+                    rida - Mandaatide arvu muutus võrreldes 2007. a.<br/>paremal - Hääli erakonnal<br/><br/><span
+                            class="old" style="width: 20px; display: inline-block;"></span> - 2007. aasta valimiste
+                    tulemus<br/></p></div>
+        </div>
+    </div>
+    <div class="foot"></div>
+</div></div></body></html>
+
