@@ -4,9 +4,11 @@ import data.PartyVotes;
 import data.PartyVotesDAO;
 import data.PartyVotesDAOImpl;
 import models.Constituency;
+import models.EstonianUniverse;
 import models.PartyResults;
 import play.mvc.Controller;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -45,6 +47,23 @@ public class Results extends Controller {
     }
 
     public static List<PartyResults> computeMandates() {
-        return Collections.emptyList();
+        List<PartyVotes> votes = partyVotes.list();
+        List<PartyResults> results = new ArrayList<PartyResults>(votes.size());
+
+        int totalVotes = computeTotalVotes(votes);
+        for (PartyVotes pVotes : votes) {
+            int mandates = EstonianUniverse.MANDATES * pVotes.getVotes() / totalVotes;
+            double votesPercentage = 100d * pVotes.getVotes() / totalVotes;
+            results.add(new PartyResults(pVotes.getParty(), mandates, pVotes.getVotes(), votesPercentage));
+        }
+        return results;
+    }
+
+    private static int computeTotalVotes(List<PartyVotes> votes) {
+        int totalVotes = 0;
+        for (PartyVotes pVotes : votes) {
+            totalVotes += pVotes.getVotes();
+        }
+        return totalVotes;
     }
 }

@@ -18,11 +18,19 @@ import javax.persistence.NamedQuery;
                         "  from Party party")
 })
 public class PartyVotes extends Model {
-    Party party;
-    int votes;
+    private final Party party;
+    private final int votes;
 
     public PartyVotes(Party party, Number votes) {
         this.party = party;
         this.votes = votes.intValue();
+    }
+
+    public Party getParty() {
+        return party;
+    }
+
+    public int getVotes() {
+        return votes;
     }
 }
