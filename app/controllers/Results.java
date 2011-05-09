@@ -11,11 +11,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class Results extends Controller {
-    static PartyVotesDAO partyResults = new PartyVotesDAOImpl();
+    static PartyVotesDAO partyVotes = new PartyVotesDAOImpl();
 
     public static void votingResults() {
         List<Constituency> constituencies = getConstituencies();
-        List<PartyVotes> results = partyResults.list();
+        List<PartyVotes> results = partyVotes.list();
         render(Long.valueOf(0L), constituencies, results);
     }
 
