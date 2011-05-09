@@ -4,6 +4,7 @@ import data.PartyVotes;
 import data.PartyVotesDAO;
 import models.Party;
 import models.PartyResults;
+import models.VotingResults;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -28,7 +29,7 @@ public class ResultsTest {
 
     @Test
     public void computesMandatesAccordingToVotes() {
-        List<PartyResults> partyResults = Results.computeMandates();
+        List<PartyResults> partyResults = Results.computeMandates().getPartyResults();
 
         PartyResults beerLovers = partyResults.get(0);
         assertThat(beerLovers.getVotes(), equalTo(200));
@@ -42,8 +43,16 @@ public class ResultsTest {
     }
 
     @Test
+    public void summarizesAllVotes() {
+        VotingResults votingResults = Results.computeMandates();
+        assertThat(votingResults.getTotalVotes(), equalTo(800));
+    }
+
+    @Test
     public void totally101MandatesShouldBeShared() {
-        List<PartyResults> partyResults = Results.computeMandates();
+        VotingResults votingResults = Results.computeMandates();
+        List<PartyResults> partyResults = votingResults.getPartyResults();
+
         assertThat(partyResults.get(0).getMandates() +
                    partyResults.get(1).getMandates(), equalTo(101));
     }

@@ -123,59 +123,59 @@ span.redline {display:block; float:left; width:18px; height: 6px; margin-right:4
 .chart .old .proc { position:absolute; width: 40px;right:-42px; font-size:10px; color: #666;}
 
 .chart .party0,
-.chart .party80043147,
-.chart .party80053370,
-.chart .party80243584,
-.chart .party80052459,
-.chart .party80223139,
-.chart .party80040344,
-.chart .party80022725,
-.chart .party80060832,
-.chart .party80051885,
-.chart .party80057600,
-.chart .party80060022 { height: 20px; clear:left; border: solid 1px #aaa; border-left: 0px; position:relative; z-index:2; _margin-left:40px;}
+.chart .party1,
+.chart .party2,
+.chart .party3,
+.chart .party4,
+.chart .party5,
+.chart .party6,
+.chart .party7,
+.chart .party8,
+.chart .party9,
+.chart .party10,
+.chart .party11 { height: 20px; clear:left; border: solid 1px #aaa; border-left: 0px; position:relative; z-index:2; _margin-left:40px;}
 
 .bigchart .party0,
-.bigchart .party80043147,
-.bigchart .party80053370,
-.bigchart .party80243584,
-.bigchart .party80052459,
-.bigchart .party80223139,
-.bigchart .party80040344,
-.bigchart .party80022725,
-.bigchart .party80060832,
-.bigchart .party80051885,
-.bigchart .party80057600,
-.bigchart .party80060022,
+.bigchart .party1,
+.bigchart .party2,
+.bigchart .party3,
+.bigchart .party4,
+.bigchart .party5,
+.bigchart .party6,
+.bigchart .party7,
+.bigchart .party8,
+.bigchart .party9,
+.bigchart .party10,
+.bigchart .party11,
 { height: auto; clear:left; border: solid 1px #aaa; border-bottom: 0px; font-size: 0px; text-indent: -999px;}
 
 .chart .party0 .proc,
-.chart .party80043147 .proc,
-.chart .party80053370 .proc,
-.chart .party80243584 .proc,
-.chart .party80052459 .proc,
-.chart .party80223139 .proc,
-.chart .party80040344 .proc,
-.chart .party80022725 .proc,
-.chart .party80060832 .proc,
-.chart .party80051885 .proc,
-.chart .party80057600 .proc,
-.chart .party80060022 .proc{position:absolute; width: 40px;right:-42px; }
+.chart .party1 .proc,
+.chart .party2 .proc,
+.chart .party3 .proc,
+.chart .party4 .proc,
+.chart .party5 .proc,
+.chart .party6 .proc,
+.chart .party7 .proc,
+.chart .party8 .proc,
+.chart .party9 .proc,
+.chart .party10 .proc,
+.chart .party11 .proc{position:absolute; width: 40px;right:-42px; }
 
-/* Erakondade V€RVID !! */
+/* Erakondade Vï¿½RVID !! */
 
 .chart .party0, .mbubble .party0, .bigchart .party0 { background-color: #95C4CC;}
-.chart .party80043147, .mbubble .party80043147, .bigchart .party80043147  { background-color: #FFE200;}
-.chart .party80053370, .mbubble .party80053370, .bigchart .party80053370 { background-color: #129201;}
-.chart .party80243584, .mbubble .party80243584, .bigchart .party80243584 { background-color: #1046CE;}
-.chart .party80052459, .mbubble .party80052459, .bigchart .party80052459 { background-color: #C4162F;}
-.chart .party80223139, .mbubble .party80223139, .bigchart .party80223139 { background-color: #7DDD0F;}
-.chart .party80040344, .mbubble .party80040344, .bigchart .party80040344 { background-color: #D28B07;}
-.chart .party80022725, .mbubble .party80022725, .bigchart .party80022725  { background-color: #acb8ce;}
-.chart .party80060832, .mbubble .party80060832, .bigchart .party80060832  { background-color: #cc6633;}
-.chart .party80051885, .mbubble .party80051885, .bigchart .party80051885   { background-color: #4b90de;}
-.chart .party80057600, .mbubble .party80057600, .bigchart .party80057600  { background-color: #9ed1ee;}
-.chart .party80060022, .mbubble .party80060022, .bigchart .party80060022  { background-color: #990000;}
+.chart .party1, .mbubble .party1, .bigchart .party1  { background-color: #FFE200;}
+.chart .party2, .mbubble .party2, .bigchart .party2 { background-color: #129201;}
+.chart .party3, .mbubble .party3, .bigchart .party3 { background-color: #1046CE;}
+.chart .party4, .mbubble .party4, .bigchart .party4 { background-color: #C4162F;}
+.chart .party5, .mbubble .party5, .bigchart .party5 { background-color: #7DDD0F;}
+.chart .party6, .mbubble .party6, .bigchart .party6 { background-color: #D28B07;}
+.chart .party7, .mbubble .party7, .bigchart .party7  { background-color: #acb8ce;}
+.chart .party8, .mbubble .party8, .bigchart .party8  { background-color: #cc6633;}
+.chart .party9, .mbubble .party9, .bigchart .party9   { background-color: #4b90de;}
+.chart .party10, .mbubble .party10, .bigchart .party10  { background-color: #9ed1ee;}
+.chart .party11, .mbubble .party11, .bigchart .party11  { background-color: #990000;}
 
 
 .smallprint {font-size: 0.92em; color:#444444;}
@@ -189,30 +189,30 @@ p.result strong { display: block; font-size: 1.5em; color: #666; line-height: 1.
 .mbubble p.result strong { display: block; font-size: 2.2em; color: #222; line-height: 1.4em;}
 .mbubble .overlay {position:absolute; left:0px; top:0px; z-index:11}
 .mbubble .party0,
-.mbubble .party80043147,
-.mbubble .party80053370,
-.mbubble .party80243584,
-.mbubble .party80052459,
-.mbubble .party80223139,
-.mbubble .party80040344,
-.mbubble .party80022725,
-.mbubble .party80060832,
-.mbubble .party80051885,
-.mbubble .party80057600,
-.mbubble .party80060022 { }
+.mbubble .party1,
+.mbubble .party2,
+.mbubble .party3,
+.mbubble .party4,
+.mbubble .party5,
+.mbubble .party6,
+.mbubble .party7,
+.mbubble .party8,
+.mbubble .party9,
+.mbubble .party10,
+.mbubble .party11 { }
 
 .mbubble.party0  { border-top: solid 10px #95C4CC;}
-.mbubble.party80043147  { border-top: solid 10px #FFE200;}
-.mbubble.party80053370  { border-top: solid 10px #129201;}
-.mbubble.party80243584  { border-top: solid 10px #1046CE;}
-.mbubble.party80052459  { border-top: solid 10px #C4162F;}
-.mbubble.party80223139  { border-top: solid 10px #7DDD0F;}
-.mbubble.party80040344  { border-top: solid 10px #D28B07;}
-.mbubble.party80022725  { border-top: solid 10px #acb8ce;}
-.mbubble.party80060832  { border-top: solid 10px #cc6633;}
-.mbubble.party80051885  { border-top: solid 10px #4b90de;}
-.mbubble.party80057600  { border-top: solid 10px #9ed1ee;}
-.mbubble.party80060022  { border-top: solid 10px #990000;}
+.mbubble.party1  { border-top: solid 10px #FFE200;}
+.mbubble.party2  { border-top: solid 10px #129201;}
+.mbubble.party3  { border-top: solid 10px #1046CE;}
+.mbubble.party4  { border-top: solid 10px #C4162F;}
+.mbubble.party5  { border-top: solid 10px #7DDD0F;}
+.mbubble.party6  { border-top: solid 10px #D28B07;}
+.mbubble.party7  { border-top: solid 10px #acb8ce;}
+.mbubble.party8  { border-top: solid 10px #cc6633;}
+.mbubble.party9  { border-top: solid 10px #4b90de;}
+.mbubble.party10  { border-top: solid 10px #9ed1ee;}
+.mbubble.party11  { border-top: solid 10px #990000;}
 
 
 .graphplaceholder { position:absolute; right:0px; top:0px;}

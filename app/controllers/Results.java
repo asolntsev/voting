@@ -6,6 +6,7 @@ import data.PartyVotesDAOImpl;
 import models.Constituency;
 import models.EstonianUniverse;
 import models.PartyResults;
+import models.VotingResults;
 import play.mvc.Controller;
 
 import java.util.ArrayList;
@@ -17,8 +18,8 @@ public class Results extends Controller {
 
     public static void votingResults() {
         List<Constituency> constituencies = getConstituencies();
-        List<PartyVotes> results = partyVotes.list();
-        render(Long.valueOf(0L), constituencies, results);
+        VotingResults votingResults = computeMandates();
+        render(Long.valueOf(0L), constituencies, votingResults);
     }
 
     public static void votingResultsPerConstituency(Long constituencyId) {
@@ -46,7 +47,7 @@ public class Results extends Controller {
         return new Constituency(0L, "EESTI VABARIIK kokku", totalPopulation);
     }
 
-    public static List<PartyResults> computeMandates() {
+    public static VotingResults computeMandates() {
         List<PartyVotes> votes = partyVotes.list();
         List<PartyResults> results = new ArrayList<PartyResults>(votes.size());
 
@@ -56,7 +57,7 @@ public class Results extends Controller {
             double votesPercentage = 100d * pVotes.getVotes() / totalVotes;
             results.add(new PartyResults(pVotes.getParty(), mandates, pVotes.getVotes(), votesPercentage));
         }
-        return results;
+        return new VotingResults(totalVotes, results);
     }
 
     private static int computeTotalVotes(List<PartyVotes> votes) {
