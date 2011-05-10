@@ -25,6 +25,7 @@ public class ResultsTest {
                 new PartyVotes(new Party("Beer lovers party"), 200),
                 new PartyVotes(new Party("Agilists party"), 600)
         ));
+        // when(Results.partyVotes.gotTotalVotes()).thenReturn(800);
     }
 
     @Test

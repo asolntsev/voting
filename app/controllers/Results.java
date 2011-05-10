@@ -49,9 +49,9 @@ public class Results extends Controller {
 
     public static VotingResults computeMandates() {
         List<PartyVotes> votes = partyVotes.list();
-        List<PartyResults> results = new ArrayList<PartyResults>(votes.size());
+        int totalVotes = computeTotalVotes(votes); // TODO Can use partyVotes.gotTotalVotes();
 
-        int totalVotes = computeTotalVotes(votes);
+        List<PartyResults> results = new ArrayList<PartyResults>(votes.size());
         for (PartyVotes pVotes : votes) {
             int mandates = EstonianUniverse.MANDATES * pVotes.getVotes() / totalVotes;
             double votesPercentage = 100d * pVotes.getVotes() / totalVotes;

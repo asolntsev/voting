@@ -15,7 +15,9 @@ import javax.persistence.NamedQuery;
                         "           select id from Candidate candidate where candidate.partyId = party.id)" +
                         "       )" +
                         ")" +
-                        "  from Party party")
+                        "  from Party party"),
+        @NamedQuery(name = "getTotalVotes",
+				query = "select count(*) from Vote vote")
 })
 public class PartyVotes extends Model {
     private final Party party;

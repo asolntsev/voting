@@ -1,3 +1,17 @@
+What can be shown:
+1. See method controllers.Results.computeMandates().
+
+ In the beginning, class Results summarizes votes by itself (uses controllers.Results.computeTotalVotes).
+ Then I decide to select this value from DB - make use of data.PartyVotesDAO.gotTotalVotes().
+ In this case, I need to add this mock to ResultsTest:
+ when(Results.partyVotes.gotTotalVotes()).thenReturn(800);
+
+2. ResultsTest:
+in the end, I can rename and reorder test-methods, so that they read as a story:
+  ResultsTest
+  - summarizesAllVotes
+  - shares101Mandates  (former totally101MandatesShouldBeShared)
+  - accordingToVotes (former computesMandatesAccordingToVotes)
 
 What problems unit-tests find:
 1. Method models.ParticipationResult.getParticipationPerDay:
@@ -5,5 +19,3 @@ Without casting to (float), methods generates zeroes.
 
 2. Method models.ParticipationResult.getParticipationPerDay:
 Forgot to multiply by 100 (to get percentage)
-
-3.
