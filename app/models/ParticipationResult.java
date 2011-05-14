@@ -33,7 +33,7 @@ public class ParticipationResult {
 	public float[] getParticipationPerDay() {
 		float[] result = new float[votesPerDate.size()];
 		for (int i = 0; i<votesPerDate.size(); i++) {
-			result[i] = (float) 100 * votesPerDate.get(i) / county.getPopulation();
+			result[i] = 100f * votesPerDate.get(i) / county.getPopulation();
 		}
 		return result;
 	}
