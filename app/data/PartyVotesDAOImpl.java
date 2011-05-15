@@ -11,7 +11,6 @@ public class PartyVotesDAOImpl implements PartyVotesDAO {
     }
 
     @SuppressWarnings("unchecked")
-    @Override
     public int gotTotalVotes() {
         return ((Number) (
                 PartyVotes.em().createNamedQuery("getTotalVotes").getSingleResult())
